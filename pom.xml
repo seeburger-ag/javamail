@@ -736,4 +736,15 @@
 	    </plugin>
 	</plugins>
     </reporting>
+      <!-- SEEBURGER repository changes -->
+  <distributionManagement>
+    <repository>
+      <id>release</id>
+      <url>http://repo.seeburger.de/archiva/repository/release/</url>
+    </repository>
+    <snapshotRepository>
+      <id>snapshot</id>
+      <url>http://repo.seeburger.de/archiva/repository/snapshot/</url>
+    </snapshotRepository>
+  </distributionManagement>
 </project>
