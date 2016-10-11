@@ -46,13 +46,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
 			    http://maven.apache.org/maven-v4_0_0.xsd">
     <parent>
-	<groupId>com.sun.mail</groupId>
+	<groupId>com.seeburger.com.sun.mail</groupId>
 	<artifactId>all</artifactId>
-	<version>1.4.7</version>
+	<version>1.4.7.SEE1-SNAPSHOT</version>
 	<relativePath>../../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.sun.mail</groupId>
+    <groupId>com.seeburger.com.sun.mail</groupId>
     <artifactId>libmbox</artifactId>
     <packaging>so</packaging>
     <name>JavaMail API mbox native library</name>
@@ -127,11 +127,11 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.sun.mail</groupId>
+            <groupId>com.seeburger.com.sun.mail</groupId>
             <artifactId>javax.mail</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.sun.mail</groupId>
+            <groupId>com.seeburger.com.sun.mail</groupId>
             <artifactId>mbox</artifactId>
         </dependency>
     </dependencies>

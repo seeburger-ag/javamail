@@ -51,18 +51,19 @@
 	<version>1</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.sun.mail</groupId>
+    <groupId>com.seeburger.com.sun.mail</groupId>
     <artifactId>all</artifactId>
     <packaging>pom</packaging>
-    <version>1.4.7</version>
+    <version>1.4.7.SEE1-SNAPSHOT</version>
     <name>JavaMail API distribution</name>
     <description>${project.name}</description>
     <url>http://kenai.com/projects/javamail</url>
 
+
     <scm>
-	<connection>scm:hg:http://kenai.com/hg/javamail~mercurial</connection>
-	<developerConnection>scm:hg:https://kenai.com/hg/javamail~mercurial</developerConnection>
-	<url>http://kenai.com/hg/javamail~mercurial</url>
+      <connection>scm:git:git@github.com:seeburger-ag/javamail.git</connection>
+      <developerConnection>scm:git:git@github.com:seeburger-ag/javamail.git</developerConnection>
+      <url>scm:git:git@github.com:seeburger-ag/javamail.git</url>
     </scm>
 
     <issueManagement>
@@ -91,9 +92,9 @@
     </organization>
 
     <properties>
-	<mail.version>1.4.7</mail.version>
+	<mail.version>1.4.7.SEE1-SNAPSHOT</mail.version>
 	<!-- like mail.version, but with underscores instead of dots -->
-	<mail.zipversion>1_4_7</mail.zipversion>
+	<mail.zipversion>1_4_7_SEE1</mail.zipversion>
 	<mail.spec.version>1.4</mail.spec.version>
 	<activation-api.version>1.1</activation-api.version>
 	<!-- defaults that are overridden in mail module -->
@@ -260,7 +261,7 @@
 			</configuration>
 		    </plugin>
 
-		    <plugin>
+		    <!-- plugin>
 			<groupId>org.apache.maven.plugins</groupId>
 			<artifactId>maven-javadoc-plugin</artifactId>
 			<version>2.7</version>
@@ -272,7 +273,7 @@
 				</goals>
 			    </execution>
 			</executions>
-		    </plugin>
+		    </plugin-->
 		</plugins>
 	    </build>
 	</profile>
@@ -539,7 +540,7 @@
 		    <execution>
 			<id>attach-sources</id>
 			<goals>
-			    <goal>jar-no-fork</goal> 
+			    <goal>jar-no-fork</goal>
 			</goals>
 		    </execution>
 		</executions>
@@ -670,27 +671,27 @@
     <dependencyManagement>
 	<dependencies>
 	    <dependency>
-		<groupId>com.sun.mail</groupId>
+		<groupId>com.seeburger.com.sun.mail</groupId>
 		<artifactId>javax.mail</artifactId>
 		<version>${mail.version}</version>
 	    </dependency>
 	    <dependency>
-		<groupId>com.sun.mail</groupId>
+		<groupId>com.seeburger.com.sun.mail</groupId>
 		<artifactId>dsn</artifactId>
 		<version>${mail.version}</version>
 	    </dependency>
 	    <dependency>
-		<groupId>com.sun.mail</groupId>
+		<groupId>com.seeburger.com.sun.mail</groupId>
 		<artifactId>gimap</artifactId>
 		<version>${mail.version}</version>
 	    </dependency>
 	    <dependency>
-		<groupId>com.sun.mail</groupId>
+		<groupId>com.seeburger.com.sun.mail</groupId>
 		<artifactId>mbox</artifactId>
 		<version>${mail.version}</version>
 	    </dependency>
 	    <dependency>
-		<groupId>com.sun.mail</groupId>
+		<groupId>com.seeburger.com.sun.mail</groupId>
 		<artifactId>taglib</artifactId>
 		<version>${mail.version}</version>
 	    </dependency>
