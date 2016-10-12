@@ -160,6 +160,7 @@
 	<module>pop3</module>
 	<module>dsn</module>
 	<module>oldmail</module>
+    <module>parent-distrib</module>
     </modules>
 
     <profiles>
@@ -180,9 +181,9 @@
 		<module>outlook</module>
 		<module>javadoc</module>
 	    </modules>
-	    <activation>
-		<activeByDefault>true</activeByDefault>
-	    </activation>
+<!-- 	    <activation> -->
+<!-- 		<activeByDefault>true</activeByDefault> -->
+<!-- 	    </activation> -->
 	</profile>
 
 	<!--

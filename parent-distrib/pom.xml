@@ -46,9 +46,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
 			    http://maven.apache.org/maven-v4_0_0.xsd">
     <parent>
-	<groupId>com.seeburger.com.sun.mail</groupId>
-	<artifactId>all</artifactId>
-	<version>1.4.7.SEE1-SNAPSHOT</version>
+    	<groupId>com.seeburger.com.sun.mail</groupId>
+    	<artifactId>all</artifactId>
+    	<version>1.4.7.SEE1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.seeburger.com.sun.mail</groupId>
@@ -81,7 +81,7 @@
 				<artifactItem>
 				    <groupId>com.seeburger.com.sun.mail</groupId>
 				    <artifactId>javax.mail</artifactId>
-				    <version>${mail.version}</version>
+				    <version>1.4.7.SEE1-SNAPSHOT</version>
 				    <classifier>sources</classifier>
 				    <outputDirectory>
 					${project.build.directory}/sources
@@ -96,7 +96,7 @@
 			<artifactItem>
 			    <groupId>com.seeburger.com.sun.mail</groupId>
 			    <artifactId>javax.mail</artifactId>
-			    <version>${mail.version}</version>
+			    <version>1.4.7.SEE1-SNAPSHOT</version>
 			</artifactItem>
 		    </artifactItems>
 		    <outputDirectory>
@@ -111,4 +111,11 @@
 	    </plugin>
         </plugins>
     </build>
+    <dependencies>
+        <dependency>
+            <groupId>com.seeburger.com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+            <version>1.4.7.SEE1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>
