@@ -47,6 +47,9 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
+
+import com.sun.mail.test.ProtocolHandler;
+
 import java.util.logging.Level;
 
 /**
@@ -57,23 +60,11 @@ import java.util.logging.Level;
  * @author sbo
  * @author Bill Shannon
  */
-public class IMAPHandler implements Runnable, Cloneable {
+public class IMAPHandler extends ProtocolHandler {
 
     /** Logger for this class. */
     protected static final Logger LOGGER =
 	Logger.getLogger(IMAPHandler.class.getName());
-
-    /** Client socket. */
-    private Socket clientSocket;
-
-    /** Quit? */
-    private boolean quit;
-
-    /** Writer to socket. */
-    private PrintWriter writer;
-
-    /** Reader from socket. */
-    private BufferedReader reader;
 
     /** Current line. */
     private String currentLine;
@@ -84,43 +75,12 @@ public class IMAPHandler implements Runnable, Cloneable {
     /** IMAP capabilities supported */
     protected String capabilities = "IMAP4REV1 IDLE";
 
-    /**
-     * Sets the client socket.
-     *
-     * @param clientSocket
-     *            client socket
-     */
-    public final void setClientSocket(final Socket clientSocket) {
-        this.clientSocket = clientSocket;
-    }
+    /** Number of messages */
+    protected int numberOfMessages = 0;
 
-    /**
-     * {@inheritDoc}
-     */
-    public final void run() {
-        try {
-            writer = new PrintWriter(clientSocket.getOutputStream());
-            reader = new BufferedReader(
-		new InputStreamReader(clientSocket.getInputStream()));
+    /** Number of recent messages */
+    protected int numberOfRecentMessages = 0;
 
-            sendGreetings();
-
-            while (!quit) {
-                handleCommand();
-            }
-
-            //clientSocket.close();
-        } catch (final Exception e) {
-            LOGGER.log(Level.SEVERE, "Error", e);
-        } finally {
-            try {
-		if (clientSocket != null)
-		    clientSocket.close();
-            } catch (final IOException ioe) {
-                LOGGER.log(Level.SEVERE, "Error", ioe);
-            }
-        }
-    }
 
     /**
      * Send greetings.
@@ -258,6 +218,8 @@ public class IMAPHandler implements Runnable, Cloneable {
             idle();
         } else if (commandName.equals("FETCH")) {
             ok();	// XXX
+        } else if (commandName.equals("SEARCH")) {
+            search(currentLine);
         } else if (commandName.equals("CLOSE")) {
             close();
         } else if (commandName.equals("LOGOUT")) {
@@ -292,8 +254,8 @@ public class IMAPHandler implements Runnable, Cloneable {
      * @throws IOException unable to read/write to socket
      */
     public void select() throws IOException {
-	untagged("0 EXISTS");
-	untagged("0 RECENT");
+        untagged(numberOfMessages + " EXISTS");
+        untagged(numberOfRecentMessages + " RECENT");
         ok();
     }
 
@@ -303,8 +265,8 @@ public class IMAPHandler implements Runnable, Cloneable {
      * @throws IOException unable to read/write to socket
      */
     public void examine() throws IOException {
-	untagged("0 EXISTS");
-	untagged("0 RECENT");
+        untagged(numberOfMessages + " EXISTS");
+        untagged(numberOfRecentMessages + " RECENT");
         ok();
     }
 
@@ -337,6 +299,26 @@ public class IMAPHandler implements Runnable, Cloneable {
             return;
         }
     }
+
+    /**
+     * SEARCH command.
+     *
+     * @throws IOException unable to read/write to socket
+     */
+    public void search(String line) throws IOException {
+    untagged("SEARCH");
+        ok();   // XXX
+    }
+
+    /**
+     * FETCH command.
+     *
+     * @throws IOException unable to read/write to socket
+     */
+    public void fetch(String line) throws IOException {
+        ok();   // XXX
+    }
+
 
     /**
      * CLOSE command.
@@ -381,14 +363,5 @@ public class IMAPHandler implements Runnable, Cloneable {
         }
     }
 
-    /**
-     * {@inheritDoc}
-     */
-    public Object clone() {
-        try {
-            return super.clone();
-        } catch (final CloneNotSupportedException e) {
-            throw new AssertionError(e);
-        }
-    }
+
 }

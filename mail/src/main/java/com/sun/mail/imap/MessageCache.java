@@ -160,7 +160,7 @@ public class MessageCache {
 	    if (logger.isLoggable(Level.FINE))
 		logger.fine("no message seqnum " + seqnum);
 	    return null;
-	} else
+	 } else
 	    return getMessage(msgnum);
     }
 
