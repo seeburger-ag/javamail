@@ -100,7 +100,7 @@
 				<artifactItem>
 				    <groupId>com.seeburger.com.sun.mail</groupId>
 				    <artifactId>javax.mail</artifactId>
-				    <version>1.4.7.SEE1-SNAPSHOT</version>
+				    <version>${project.version}</version>
 				    <classifier>sources</classifier>
 				    <outputDirectory>
 					${project.build.directory}/sources
@@ -115,7 +115,7 @@
 			<artifactItem>
 			    <groupId>com.seeburger.com.sun.mail</groupId>
 			    <artifactId>javax.mail</artifactId>
-			    <version>1.4.7.SEE1-SNAPSHOT</version>
+			    <version>${project.version}</version>
 			</artifactItem>
 		    </artifactItems>
 		    <outputDirectory>
