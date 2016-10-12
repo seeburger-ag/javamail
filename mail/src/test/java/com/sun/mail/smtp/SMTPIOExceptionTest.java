@@ -52,6 +52,7 @@ import javax.mail.event.ConnectionAdapter;
 import javax.mail.event.ConnectionEvent;
 
 import org.junit.Test;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.rules.Timeout;
 import static org.junit.Assert.assertTrue;
@@ -71,6 +72,7 @@ public final class SMTPIOExceptionTest {
     private static final int TIMEOUT = 200;	// I/O timeout, in millis
 
     @Test
+    @Ignore
     public void test() throws Exception {
         SMTPServer server = null;
         try {
