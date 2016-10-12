@@ -51,7 +51,7 @@
     <groupId>com.seeburger.com.sun.mail</groupId>
     <artifactId>all</artifactId>
     <packaging>pom</packaging>
-    <version>1.4.7.SEE2</version>
+    <version>1.4.7.SEE3-SNAPSHOT</version>
     <name>JavaMail API distribution</name>
     <description>${project.name}</description>
     <url>http://kenai.com/projects/javamail</url>
@@ -61,7 +61,7 @@
       <connection>scm:git:git@github.com:seeburger-ag/javamail.git</connection>
       <developerConnection>scm:git:git@github.com:seeburger-ag/javamail.git</developerConnection>
       <url>scm:git:git@github.com:seeburger-ag/javamail.git</url>
-      <tag>all-1.4.7.SEE2</tag>
+      <tag>HEAD</tag>
   </scm>
 
     <issueManagement>
@@ -695,17 +695,17 @@
 	    <dependency>
 		<groupId>com.seeburger.com.sun.mail</groupId>
 		<artifactId>javax.mail</artifactId>
-		<version>1.4.7.SEE2</version>
+		<version>1.4.7.SEE3-SNAPSHOT</version>
 	    </dependency>
 	    <dependency>
 		<groupId>com.seeburger.com.sun.mail</groupId>
 		<artifactId>dsn</artifactId>
-		<version>1.4.7.SEE2</version>
+		<version>1.4.7.SEE3-SNAPSHOT</version>
 	    </dependency>
 	    <dependency>
 		<groupId>com.seeburger.com.sun.mail</groupId>
 		<artifactId>gimap</artifactId>
-		<version>1.4.7.SEE2</version>
+		<version>1.4.7.SEE3-SNAPSHOT</version>
 	    </dependency>
 	    <dependency>
 		<groupId>com.seeburger.com.sun.mail</groupId>
