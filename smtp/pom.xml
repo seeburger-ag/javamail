@@ -45,7 +45,7 @@
     <parent>
 	<groupId>com.seeburger.com.sun.mail</groupId>
 	<artifactId>parent-distrib</artifactId>
-	<version>1.4.7.SEE2-SNAPSHOT</version>
+	<version>1.4.7.SEE2</version>
 	<relativePath>../parent-distrib/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
