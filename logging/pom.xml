@@ -64,7 +64,7 @@
         <dependency>
             <groupId>com.seeburger.com.sun.mail</groupId>
             <artifactId>demo</artifactId>
-	    <version>${mail.version}</version>
+	    <version>1.4.7.SEE1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 </project>

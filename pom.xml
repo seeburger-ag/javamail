@@ -92,7 +92,7 @@
     </organization>
 
     <properties>
-	<mail.version>1.4.7.SEE1-SNAPSHOT</mail.version>
+	<mail.version>1.4.7.SEE1</mail.version>
 	<!-- like mail.version, but with underscores instead of dots -->
 	<mail.zipversion>1_4_7_SEE1</mail.zipversion>
 	<mail.spec.version>1.4</mail.spec.version>
@@ -679,27 +679,27 @@
 	    <dependency>
 		<groupId>com.seeburger.com.sun.mail</groupId>
 		<artifactId>javax.mail</artifactId>
-		<version>${mail.version}</version>
+		<version>1.4.7.SEE1-SNAPSHOT</version>
 	    </dependency>
 	    <dependency>
 		<groupId>com.seeburger.com.sun.mail</groupId>
 		<artifactId>dsn</artifactId>
-		<version>${mail.version}</version>
+		<version>1.4.7.SEE1-SNAPSHOT</version>
 	    </dependency>
 	    <dependency>
 		<groupId>com.seeburger.com.sun.mail</groupId>
 		<artifactId>gimap</artifactId>
-		<version>${mail.version}</version>
+		<version>1.4.7.SEE1-SNAPSHOT</version>
 	    </dependency>
 	    <dependency>
 		<groupId>com.seeburger.com.sun.mail</groupId>
 		<artifactId>mbox</artifactId>
-		<version>${mail.version}</version>
+		<version>1.4.7.SEE1-SNAPSHOT</version>
 	    </dependency>
 	    <dependency>
 		<groupId>com.seeburger.com.sun.mail</groupId>
 		<artifactId>taglib</artifactId>
-		<version>${mail.version}</version>
+		<version>1.4.7.SEE1-SNAPSHOT</version>
 	    </dependency>
 	    <dependency>
 		<groupId>javax.servlet</groupId>
