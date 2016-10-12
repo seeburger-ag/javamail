@@ -41,10 +41,7 @@
 
 -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-			    http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0        http://maven.apache.org/maven-v4_0_0.xsd">
     <parent>
 	<groupId>net.java</groupId>
 	<artifactId>jvnet-parent</artifactId>
@@ -54,7 +51,7 @@
     <groupId>com.seeburger.com.sun.mail</groupId>
     <artifactId>all</artifactId>
     <packaging>pom</packaging>
-    <version>1.4.7.SEE1-SNAPSHOT</version>
+    <version>1.4.7.SEE1</version>
     <name>JavaMail API distribution</name>
     <description>${project.name}</description>
     <url>http://kenai.com/projects/javamail</url>
@@ -64,7 +61,8 @@
       <connection>scm:git:git@github.com:seeburger-ag/javamail.git</connection>
       <developerConnection>scm:git:git@github.com:seeburger-ag/javamail.git</developerConnection>
       <url>scm:git:git@github.com:seeburger-ag/javamail.git</url>
-    </scm>
+      <tag>all-1.4.7.SEE1</tag>
+  </scm>
 
     <issueManagement>
 	<system>Bugzilla</system>
@@ -121,7 +119,7 @@
 	<mail.packages.private>
 	    com.sun.mail.*
 	</mail.packages.private>
-	<mail.probeFile/>
+	<mail.probeFile />
 	<!-- for the osgiversion-maven-plugin -->
 	<hk2.plugin.version>2.0.0</hk2.plugin.version>
 	<javac.path>/opt/jdk1.4/bin/javac</javac.path>
@@ -135,7 +133,7 @@
 	<findbugs.skip>
 	    true
 	</findbugs.skip>
-	<findbugs.exclude/>
+	<findbugs.exclude />
     </properties>
 
     <developers>
@@ -697,17 +695,17 @@
 	    <dependency>
 		<groupId>com.seeburger.com.sun.mail</groupId>
 		<artifactId>javax.mail</artifactId>
-		<version>1.4.7.SEE1-SNAPSHOT</version>
+		<version>1.4.7.SEE1</version>
 	    </dependency>
 	    <dependency>
 		<groupId>com.seeburger.com.sun.mail</groupId>
 		<artifactId>dsn</artifactId>
-		<version>1.4.7.SEE1-SNAPSHOT</version>
+		<version>1.4.7.SEE1</version>
 	    </dependency>
 	    <dependency>
 		<groupId>com.seeburger.com.sun.mail</groupId>
 		<artifactId>gimap</artifactId>
-		<version>1.4.7.SEE1-SNAPSHOT</version>
+		<version>1.4.7.SEE1</version>
 	    </dependency>
 	    <dependency>
 		<groupId>com.seeburger.com.sun.mail</groupId>
