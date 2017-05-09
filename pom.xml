@@ -121,7 +121,7 @@
 	</mail.packages.private>
 	<mail.probeFile />
 	<!-- for the osgiversion-maven-plugin -->
-	<hk2.plugin.version>2.0.0</hk2.plugin.version>
+	<hk2.plugin.version>2.2.0</hk2.plugin.version>
 	<javac.path>/opt/jdk1.4/bin/javac</javac.path>
 	<project.build.sourceEncoding>iso-8859-1</project.build.sourceEncoding>
 	<findbugs.threshold>
