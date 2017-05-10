@@ -63,13 +63,13 @@ public final class IMAPSaslLoginTest {
 	IMAPServer server = null;
 	try {
 	    IMAPHandler handler = new IMAPSaslHandler();
-	    server = new IMAPServer(handler, 26422);
+	    server = new IMAPServer(handler, 26462);
 	    server.start();
 	    Thread.sleep(1000);
 
 	    Properties properties = new Properties();
 	    properties.setProperty("mail.imap.host", "localhost");
-	    properties.setProperty("mail.imap.port", "26422");
+	    properties.setProperty("mail.imap.port", "26462");
 	    properties.setProperty("mail.imap.sasl.enable", "true");
 	    properties.setProperty("mail.imap.sasl.mechanisms", "DIGEST-MD5");
 	    Session session = Session.getInstance(properties);

@@ -113,6 +113,7 @@ public final class IMAPServer extends Thread {
 
             try {
                 serverSocket = openServerSocket();
+                serverSocket.setReuseAddress(true);
             } catch (final IOException e) {
                 throw new RuntimeException(e);
             }

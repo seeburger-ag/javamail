@@ -68,13 +68,13 @@ public final class IMAPIdleUntaggedResponseTest {
         IMAPServer server = null;
         try {
             final IMAPHandler handler = new IMAPHandlerIdleExists();
-            server = new IMAPServer(handler, 26422);
+            server = new IMAPServer(handler, 26432);
             server.start();
             Thread.sleep(1000);
 
             final Properties properties = new Properties();
             properties.setProperty("mail.imap.host", "localhost");
-            properties.setProperty("mail.imap.port", "26422");
+            properties.setProperty("mail.imap.port", "26432");
             final Session session = Session.getInstance(properties);
             //session.setDebug(true);
 

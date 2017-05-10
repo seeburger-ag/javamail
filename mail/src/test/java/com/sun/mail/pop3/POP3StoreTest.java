@@ -53,11 +53,11 @@ import static org.junit.Assert.fail;
 
 /**
  * Test is connected.
- * 
+ *
  * @author sbo
  */
 public final class POP3StoreTest {
-    
+
     /**
      * Check is connected.
      */
@@ -66,22 +66,22 @@ public final class POP3StoreTest {
         POP3Server server = null;
         try {
             final POP3Handler handler = new POP3HandlerNoopErr();
-            server = new POP3Server(handler, 26421);
+            server = new POP3Server(handler, 26471);
             server.start();
             Thread.sleep(1000);
-            
+
             final Properties properties = new Properties();
             properties.setProperty("mail.pop3.host", "localhost");
-            properties.setProperty("mail.pop3.port", "26421");
+            properties.setProperty("mail.pop3.port", "26471");
             final Session session = Session.getInstance(properties);
             //session.setDebug(true);
-            
+
             final Store store = session.getStore("pop3");
             try {
                 store.connect("test", "test");
                 final Folder folder = store.getFolder("INBOX");
                 folder.open(Folder.READ_ONLY);
-                
+
                 // Check
                 assertFalse(folder.isOpen());
             } finally {
@@ -96,14 +96,14 @@ public final class POP3StoreTest {
             }
         }
     }
-    
+
     /**
      * Custom handler. Returns ERR for NOOP.
-     * 
+     *
      * @author sbo
      */
     private static final class POP3HandlerNoopErr extends POP3Handler {
-        
+
         /**
          * {@inheritDoc}
          */

@@ -59,13 +59,13 @@ public class SMTPSaslLoginTest {
     public void test() {
         SMTPServer server = null;
         try {
-            server = new SMTPServer(new SMTPSaslHandler(), 26423);
+            server = new SMTPServer(new SMTPSaslHandler(), 26433);
             server.start();
             Thread.sleep(1000);
 
             Properties properties = new Properties();
             properties.setProperty("mail.smtp.host", "localhost");
-            properties.setProperty("mail.smtp.port", "26423");
+            properties.setProperty("mail.smtp.port", "26433");
             properties.setProperty("mail.smtp.sasl.enable", "true");
             properties.setProperty("mail.smtp.sasl.mechanisms", "DIGEST-MD5");
             properties.setProperty("mail.smtp.auth.digest-md5.disable", "true");

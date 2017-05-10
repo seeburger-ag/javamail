@@ -73,14 +73,14 @@ public final class IMAPLoginFailureTest {
 		    super.sendGreetings();
 		}
 	    };
-	    server = new IMAPServer(handler, 26422);
+	    server = new IMAPServer(handler, 26442);
 	    server.start();
 	    Thread.sleep(1000);
 
 	    SavedSocketFactory ssf = new SavedSocketFactory();
 	    Properties properties = new Properties();
 	    properties.setProperty("mail.imap.host", "localhost");
-	    properties.setProperty("mail.imap.port", "26422");
+	    properties.setProperty("mail.imap.port", "26442");
 	    properties.put("mail.imap.socketFactory", ssf);
 	    final Session session = Session.getInstance(properties);
 	    //session.setDebug(true);

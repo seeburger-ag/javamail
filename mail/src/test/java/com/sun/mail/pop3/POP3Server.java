@@ -46,26 +46,26 @@ import java.net.Socket;
 
 /**
  * POP3 Server.
- * 
+ *
  * @author sbo
  */
 public final class POP3Server extends Thread {
-    
+
     /** Server socket. */
     private ServerSocket serverSocket;
-    
+
     /** Keep on? */
     private volatile boolean keepOn;
-    
+
     /** Port to listen. */
     private final int port;
-    
+
     /** POP3 handler. */
     private final POP3Handler handler;
-    
+
     /**
      * POP3 server.
-     * 
+     *
      * @param handler
      *            handler
      * @param port
@@ -75,7 +75,7 @@ public final class POP3Server extends Thread {
         this.handler = handler;
         this.port = port;
     }
-    
+
     /**
      * Exit POP3 server.
      */
@@ -90,10 +90,10 @@ public final class POP3Server extends Thread {
             throw new RuntimeException(e);
         }
     }
-    
+
     /**
      * Open a server socket.
-     * 
+     *
      * @return server socket
      * @throws IOException
      *             unable to open socket
@@ -101,20 +101,20 @@ public final class POP3Server extends Thread {
     private ServerSocket openServerSocket() throws IOException {
         return new ServerSocket(this.port, 0, null);
     }
-    
+
     /**
      * {@inheritDoc}
      */
     public void run() {
         try {
             this.keepOn = true;
-            
+
             try {
                 this.serverSocket = this.openServerSocket();
             } catch (final IOException e) {
                 throw new RuntimeException(e);
             }
-            
+
             while (this.keepOn) {
                 try {
                     final Socket clientSocket = this.serverSocket.accept();

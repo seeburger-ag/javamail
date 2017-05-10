@@ -74,13 +74,13 @@ public final class POP3ReadableMimeTest {
     private static void startServer(boolean cached) {
         try {
             final POP3Handler handler = new POP3Handler();
-            server = new POP3Server(handler, 26421);
+            server = new POP3Server(handler, 26461);
             server.start();
             Thread.sleep(1000);
 
             final Properties properties = new Properties();
             properties.setProperty("mail.pop3.host", "localhost");
-            properties.setProperty("mail.pop3.port", "26421");
+            properties.setProperty("mail.pop3.port", "26461");
 	    if (cached)
 		properties.setProperty("mail.pop3.filecache.enable", "true");
             final Session session = Session.getInstance(properties);

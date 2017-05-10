@@ -65,13 +65,13 @@ public final class SMTPCloseTest {
     public void test() {
         NopServer server = null;
         try {
-            server = new NopServer(26423);
+            server = new NopServer(26483);
             server.start();
             Thread.sleep(1000);
 
             final Properties properties = new Properties();
             properties.setProperty("mail.smtp.host", "localhost");
-            properties.setProperty("mail.smtp.port", "26423");
+            properties.setProperty("mail.smtp.port", "26483");
             properties.setProperty("mail.smtp.timeout", "100");
             final Session session = Session.getInstance(properties);
             //session.setDebug(true);

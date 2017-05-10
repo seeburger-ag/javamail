@@ -71,13 +71,13 @@ public final class POP3FolderClosedExceptionTest {
 	POP3Server server = null;
 	try {
 	    final POP3Handler handler = new POP3HandlerTimeoutBody();
-	    server = new POP3Server(handler, 26421);
+	    server = new POP3Server(handler, 26431);
 	    server.start();
 	    Thread.sleep(1000);
 
 	    final Properties properties = new Properties();
 	    properties.setProperty("mail.pop3.host", "localhost");
-	    properties.setProperty("mail.pop3.port", "26421");
+	    properties.setProperty("mail.pop3.port", "26431");
 	    final Session session = Session.getInstance(properties);
 	    //session.setDebug(true);
 
@@ -143,13 +143,13 @@ public final class POP3FolderClosedExceptionTest {
 	POP3Server server = null;
 	try {
 	    final POP3Handler handler = new POP3HandlerTimeoutHeader();
-	    server = new POP3Server(handler, 26421);
+	    server = new POP3Server(handler, 26441);
 	    server.start();
 	    Thread.sleep(1000);
 
 	    final Properties properties = new Properties();
 	    properties.setProperty("mail.pop3.host", "localhost");
-	    properties.setProperty("mail.pop3.port", "26421");
+	    properties.setProperty("mail.pop3.port", "26441");
 	    final Session session = Session.getInstance(properties);
 	    //session.setDebug(true);
 
