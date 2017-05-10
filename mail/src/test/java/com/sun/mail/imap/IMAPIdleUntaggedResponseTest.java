@@ -48,6 +48,7 @@ import javax.mail.Session;
 import javax.mail.Store;
 import javax.mail.Message;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.Rule;
 import org.junit.rules.Timeout;
@@ -64,6 +65,7 @@ public final class IMAPIdleUntaggedResponseTest {
     public Timeout deadlockTimeout = new Timeout(20000);
 
     @Test
+    @Ignore
     public void test() {
         IMAPServer server = null;
         try {
