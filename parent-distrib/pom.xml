@@ -45,7 +45,7 @@
     <parent>
     	<groupId>com.seeburger.com.sun.mail</groupId>
     	<artifactId>all</artifactId>
-    	<version>1.4.7.SEE4</version>
+    	<version>1.4.7.SEE5-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.seeburger.com.sun.mail</groupId>
@@ -112,7 +112,7 @@
         <dependency>
             <groupId>com.seeburger.com.sun.mail</groupId>
             <artifactId>javax.mail</artifactId>
-            <version>1.4.7.SEE4</version>
+            <version>1.4.7.SEE5-SNAPSHOT</version>
         </dependency>
     </dependencies>
 </project>
